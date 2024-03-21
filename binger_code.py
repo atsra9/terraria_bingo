@@ -1,32 +1,30 @@
 import random
 import math
-
-# To-Do:
-# Randomize individual tasks
+import pyperclip as clip # pip install pyperclip
 
 bingerBoard = '['
 
 easyTasks = ['1 of each grave (no golden variants)',
-             '- Molotov Cocktails', # 30-60
+             str(random.randint(30,60)) + ' Molotov Cocktails', # 30-60
              'Obsidian Skull',
              'Fruit Salad and Fruit Juice',
-             '- Cracked Dungeon Bricks', # 25-75
+             str(random.randint(25,75)) + ' Cracked Dungeon Bricks', # 25-75
              'Any Gem Staff',
              'Die to Corrupt/Vicious Penguin',
              'Any Animal Cage',
              'Reef Chandelier',
-             '- Boulders', # 100-200
-             '- Ice Blocks', # 800-1200
-             '- Stars in a Bottle', # 15-25
+             str(random.randint(100,200)) + ' Boulders', # 100-200
+             str(random.randint(800,1200)) + ' Ice Blocks', # 800-1200
+             str(random.randint(15,25)) + ' Stars in a Bottle', # 15-25
              'Monster Lasanga',
              'Throne',
              'Magic Mirror',
-             '- Unique Banners', # 3-6
-             '- Scarab Bombs', # 30-50
+             str(random.randint(3,6)) + ' Unique Banners', # 3-6
+             str(random.randint(30,50)) + ' Scarab Bombs', # 30-50
              'Seafood Dinner',
-             '- Unique Sinks', # 7-10
-             '- Grub Soups', # 4-6
-             '- Orange Torches' # 150-250
+             str(random.randint(7,10)) + ' Unique Sinks', # 7-10
+             str(random.randint(4,6)) + ' Grub Soups', # 4-6
+             str(random.randint(150,250)) + ' Orange Torches' # 150-250
              ]
 numEasyTasks = len(easyTasks)
 
@@ -35,15 +33,15 @@ medTasks = ['Boomstick',
             'Solidifier',
             'Abeemination',
             'Torch God\'s Favor',
-            '- Enchanted Nightcrawlers', # 20-30
+            str(random.randint(20,30)) + ' Enchanted Nightcrawlers', # 20-30
             'Ash Wood Clock',
-            '- Copper/Tin Bars', # 80-120
-            '- Unique Dye Items', # 5-7
+            str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
+            str(random.randint(5,7)) + ' Unique Dye Items', # 5-7
             'Gender Change Potion',
             'Blade of Grass',
             'Flinx Staff',
             'Ancient Armor Piece',
-            '- Unique Crates', # 2-3
+            str(random.randint(2,3)) + ' Unique Crates', # 2-3
             'Axe of Regrowth',
             'Mandible Blade',
 
@@ -52,44 +50,44 @@ numMedTasks = len(medTasks)
 
 hardTasks = ['3x3 Underworld Painting',
              'Aether Monolith',
-             '- Phaseblade', # add rng later
+             str(random.choice(['Purple', 'Yellow', 'Blue', 'Green', 'Red', 'Orange', 'White'])) + ' Phaseblade', # Any color phaseblade
              'Full Fossil Armor',
-             'Boss Trophy/Mask', # add rng later
+             'Boss ' + str(random.choice(['Mask', 'Trophy'])), # Boss Mask/Trophy
              'Any Spell Book',
-             '- Illuminant Coating', # 1000 - 2000
-             'Life/Mana Hair Dye', #add rng later
+             str(random.randint(1000,2000)) + ' Illuminant Coating', # 1000 - 2000
+             str(random.choice(['Life', 'Mana'])) + ' Hair Dye', # Life/Mana Hair Dye
              'Ambrosia',
-             '- Javelins', # 500 - 1000
+             str(random.randint(500,1000)) + ' Javelins', # 500 - 1000
              'Bronze Golf Trophy',
-             '- Unique Enemy Statues', # 6 - 10
-             '- Geysers', # 4 - 7
+             str(random.randint(6,100)) + ' Unique Enemy Statues', # 6 - 10
+             str(random.randint(4,7)) + ' Geysers', # 4 - 7
              'Used Gas Trap',
              'Night Vision Helmet',
              'Void Vault',
-             'Black Pearl', #add rng later
-             '- Life Crystal Boulders', # 8 - 12
+             'Black Pearl',
+             str(random.randint(8,12)) + ' Life Crystal Boulders', # 8 - 12
              'Dead Man\'s Sweater',
-             '- Poo', # 300 - 500,
+             str(random.randint(300,500)) + ' Poo', # 300 - 500,
              'Trimarang',
              'Meteorite Piano',
-             '- Shadow Candles', # 50 - 60
+             str(random.randint(50,60)) + ' Shadow Candles', # 50 - 60
              'Full Necro Armor',
              'The Grand Design'
              ]
 numHardTasks = len(hardTasks)
 
 insaneTasks = [ 'Flamarang',
-                '- Decorative Mana Potions', # 1500 - 2500
-                '- Multicolored Stained Glass', # 800 - 1200
+                str(random.randint(1500,2500)) + ' Decorative Mana Potions', # 1500 - 2500
+                str(random.randint(800,1200)) + ' Multicolored Stained Glass', # 800 - 1200
                 'Diving Helmet',
                 'Night\'s Edge',
                 'Lightning Boots',
                 'Obsidian Crate',
                 'Full Molten Armor',
                 'Mollusk Whistle',
-                '- unique crafting stations', # 13 - 17
-                '- Different Premium Golf Clubs', # 2 - 4
-                '- Flasks of Fire/Poison', # 25 - 40
+                str(random.randint(13,17)) + ' unique crafting stations', # 13 - 17
+                str(random.randint(2,4)) + ' Different Premium Golf Clubs', # 2 - 4
+                str(random.randint(25,40)) + ' Flasks of Fire/Poison', # 25 - 40
                 'Sunfury'
                 ]
 numInsaneTasks = len(insaneTasks)
@@ -137,3 +135,11 @@ for i in range(25):
 bingerBoard = bingerBoard[0 : len(bingerBoard) - 2] + ']'           # minus 2 to delete last line break and comma
 print(bingerBoard)
 print(numAllTasks)
+
+print('Print to clipboard? (Y/N)')
+clipInput = str(input())
+if clipInput == 'Y' or clipInput == 'y':
+    clip.copy(bingerBoard)
+    print('Copied!')
+else:
+    print('')
