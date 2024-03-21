@@ -29,7 +29,6 @@ easyTasks = ['1 of each grave (no golden variants)',
              '- Grub Soups', # 4-6
              '- Orange Torches' # 150-250
              ]
-numEasyTasks = len(easyTasks)
 
 medTasks = ['Boomstick',
             'Encumbering Stone',
@@ -49,7 +48,6 @@ medTasks = ['Boomstick',
             'Mandible Blade',
 
             ]
-numMedTasks = len(medTasks)
 
 hardTasks = ['3x3 Underworld Painting',
              'Aether Monolith',
@@ -77,7 +75,6 @@ hardTasks = ['3x3 Underworld Painting',
              'Full Necro Armor',
              'The Grand Design'
              ]
-numHardTasks = len(hardTasks)
 
 insaneTasks = [ 'Flamarang',
                 '- Decorative Mana Potions', # 1500 - 2500
@@ -93,8 +90,8 @@ insaneTasks = [ 'Flamarang',
                 '- Flasks of Fire/Poison', # 25 - 40
                 'Sunfury'
                 ]
-numInsaneTasks = len(insaneTasks)
-numAllTasks = [numEasyTasks, numMedTasks, numHardTasks, numInsaneTasks]
+
+numAllTasks = [len(tasks) for tasks in [easyTasks, medTasks, hardTasks, insaneTasks]]
 
 for i in range(25):
     rand = random.random()
