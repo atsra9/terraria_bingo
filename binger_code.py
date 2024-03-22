@@ -24,7 +24,9 @@ easyTasks = ['1 of each grave (no golden variants)',
              'Seafood Dinner',
              str(random.randint(7,10)) + ' Unique Sinks', # 7-10
              str(random.randint(4,6)) + ' Grub Soups', # 4-6
-             str(random.randint(150,250)) + ' Orange Torches' # 150-250
+             str(random.randint(150,250)) + ' Orange Torches', # 150-250
+             str(random.randint(15,30)) + ' Antlion Eggs', # 15-30
+             str(random.choice(['Glass', 'Frozen', 'Honey', 'Marble', 'Granite']) + ' Bookcase')
              ]
 numEasyTasks = len(easyTasks)
 
@@ -37,14 +39,14 @@ medTasks = ['Boomstick',
             'Ash Wood Clock',
             str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
             str(random.randint(5,7)) + ' Unique Dye Items', # 5-7
-            'Gender Change Potion',
+            str(random.choice(['Gender Change Potion', 'Garland'])),
             'Blade of Grass',
             'Flinx Staff',
             'Ancient Armor Piece',
             str(random.randint(2,3)) + ' Unique Crates', # 2-3
             'Axe of Regrowth',
             'Mandible Blade',
-
+            str(random.randint(60,90)) + ' Green Stucco', # 60-90
             ]
 numMedTasks = len(medTasks)
 
