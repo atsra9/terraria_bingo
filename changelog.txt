@@ -3,3 +3,4 @@
   - New Easy Task: 15-30 Antlion Eggs
   - New Easy Task: Glass/Frozen/Honey/Marble/Granite Bookcase
   - New Medium Task: 60-90 Green Stucco
+  - Fixed Spelling of Monster Lasagna
