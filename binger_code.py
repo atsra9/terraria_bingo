@@ -16,7 +16,7 @@ easyTasks = ['1 of each grave (no golden variants)',
              str(random.randint(100,200)) + ' Boulders', # 100-200
              str(random.randint(800,1200)) + ' Ice Blocks', # 800-1200
              str(random.randint(15,25)) + ' Stars in a Bottle', # 15-25
-             'Monster Lasanga',
+             'Monster Lasagna',
              'Throne',
              'Magic Mirror',
              str(random.randint(3,6)) + ' Unique Banners', # 3-6
