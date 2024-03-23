@@ -26,7 +26,11 @@ easyTasks = ['1 of each grave (no golden variants)',
              str(random.randint(4,6)) + ' Grub Soups', # 4-6
              str(random.randint(150,250)) + ' Orange Torches', # 150-250
              str(random.randint(15,30)) + ' Antlion Eggs', # 15-30
-             str(random.choice(['Glass', 'Frozen', 'Honey', 'Marble', 'Granite']) + ' Bookcase')
+             str(random.choice(['Glass', 'Frozen', 'Honey', 'Marble', 'Granite']) + ' Bookcase'),
+             str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Gem Lock',
+             'Glowing Snail',
+             str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
+             str(random.randint(20,30)) + ' Feathers', # 20-30
              ]
 numEasyTasks = len(easyTasks)
 
@@ -37,17 +41,24 @@ medTasks = ['Boomstick',
             'Torch God\'s Favor',
             str(random.randint(20,30)) + ' Enchanted Nightcrawlers', # 20-30
             'Ash Wood Clock',
-            str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
             str(random.randint(5,7)) + ' Unique Dye Items', # 5-7
             str(random.choice(['Gender Change Potion', 'Garland'])),
             'Blade of Grass',
-            'Flinx Staff',
+            str(random.choice(['Flinx Staff', 'Flinx Fur Coat'])),
             'Ancient Armor Piece',
             str(random.randint(2,3)) + ' Unique Crates', # 2-3
             'Axe of Regrowth',
             'Mandible Blade',
             str(random.randint(60,90)) + ' Green Stucco', # 60-90
-            str(random.randint(80,120)) + ' Aetherium Brick' # 80-120
+            str(random.randint(80,120)) + ' Aetherium Brick', # 80-120
+            str(random.randint(2,3)) + ' Unique Grappling Hooks', # 2-3
+            'Guide to Peaceful Coexistance',
+            str(random.randint(30,50)) + ' TNT Barrels', # 30-50
+            str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Robe',
+            'Faeling',
+            str(random.randint(2000,3000)) + ' Poisoned Knives', # 2000-3000
+            str(random.randint(100,200)) + ' Hellstone Bricks', # 100-200
+            str(random.randint(25,40)) + ' Skyware Candles', # 25-40
             ]
 numMedTasks = len(medTasks)
 
@@ -75,7 +86,8 @@ hardTasks = ['3x3 Underworld Painting',
              'Meteorite Piano',
              str(random.randint(50,60)) + ' Shadow Candles', # 50 - 60
              'Full Necro Armor',
-             'The Grand Design'
+             'The Grand Design',
+             'Full Obsidian Armor'
              ]
 numHardTasks = len(hardTasks)
 
@@ -91,7 +103,8 @@ insaneTasks = [ 'Flamarang',
                 str(random.randint(13,17)) + ' unique crafting stations', # 13 - 17
                 str(random.randint(2,4)) + ' Different Premium Golf Clubs', # 2 - 4
                 str(random.randint(25,40)) + ' Flasks of Fire/Poison', # 25 - 40
-                'Sunfury'
+                'Sunfury',
+                'Medicated Bandage',
                 ]
 numInsaneTasks = len(insaneTasks)
 numAllTasks = [numEasyTasks, numMedTasks, numHardTasks, numInsaneTasks]
