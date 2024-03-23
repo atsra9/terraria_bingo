@@ -47,6 +47,7 @@ medTasks = ['Boomstick',
             'Axe of Regrowth',
             'Mandible Blade',
             str(random.randint(60,90)) + ' Green Stucco', # 60-90
+            str(random.randint(80,120)) + ' Aetherium Brick' # 80-120
             ]
 numMedTasks = len(medTasks)
 
