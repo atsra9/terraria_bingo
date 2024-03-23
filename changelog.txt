@@ -5,3 +5,19 @@
   - New Medium Task: 60-90 Green Stucco
   - Fixed Spelling of Monster Lasagna
   - New Medium Task: 80-120 Aetherium Brick
+
+3/23:
+  - New Easy Task: Random Gem Lock
+  - New Easy Task: Glowing Snail
+  - New Easy Task: 20-30 Feathers
+  - New Medium Task: 2-3 Unique Grappling Hooks
+  - New Medium Task: Guide to Peaceful Coexistance
+  - New Medium Task: 30-50 TNT Barrels
+  - New Medium Task: Random Gem Robe
+  - New Medium Task: Faeling
+  - New Medium Task: 2000-3000 Poisoned Knives
+  - New Medium Task: 100-200 Hellstone Brick
+  - New Medium Task: 25-40 Skyware Candles
+  - New Hard Task: Full Obsidian Armor
+  - New Insane Task: Medicated Bandage
+  - Task Rework: 80-120 Copper Bars nerfed from Medium -> Easy
