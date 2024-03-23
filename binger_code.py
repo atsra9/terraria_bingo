@@ -57,7 +57,7 @@ medTasks = ['Boomstick',
             str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Robe',
             'Faeling',
             str(random.randint(2000,3000)) + ' Poisoned Knives', # 2000-3000
-            str(random.randint(100,200)) + ' Hellstone Bricks', # 100-200
+            str(random.randint(100,200)) + ' Hellstone Brick', # 100-200
             str(random.randint(25,40)) + ' Skyware Candles', # 25-40
             ]
 numMedTasks = len(medTasks)
