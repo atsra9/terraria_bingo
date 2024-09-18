@@ -73,7 +73,7 @@ hardTasks = ['3x3 Underworld Painting',
              'Ambrosia',
              str(random.randint(500,1000)) + ' Javelins', # 500 - 1000
              'Bronze Golf Trophy',
-             str(random.randint(6,100)) + ' Unique Enemy Statues', # 6 - 10
+             str(random.randint(6,10)) + ' Unique Enemy Statues', # 6 - 10
              str(random.randint(4,7)) + ' Geysers', # 4 - 7
              'Used Gas Trap',
              'Night Vision Helmet',
