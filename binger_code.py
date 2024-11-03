@@ -175,6 +175,8 @@ if boardInput == 'D' or boardInput == 'd':
     bingerBoard = defaultBoard()
 elif boardInput == 's' or boardInput == 's':
     bingerBoard = speedBoard()
+else:
+    bingerBoard = ''
 
 # print(bingerBoard)
 # print(numAllTasks)
