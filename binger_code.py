@@ -2,8 +2,6 @@ import random
 import math
 import pyperclip as clip # pip install pyperclip
 
-bingerBoard = '['
-
 easyTasks = ['1 of each grave (no golden variants)',
              str(random.randint(30,60)) + ' Molotov Cocktails', # 30-60
              'Obsidian Skull',
@@ -109,48 +107,77 @@ insaneTasks = [ 'Flamarang',
 numInsaneTasks = len(insaneTasks)
 numAllTasks = [numEasyTasks, numMedTasks, numHardTasks, numInsaneTasks]
 
-for i in range(25):
-    bingerBoard += '{\"name\": \"'
-    rand = random.random()
-    if i == 12:                                                     # Middle Square, 100% Insane
-        insaneRand = math.floor(rand*len(insaneTasks))
-        bingerBoard += insaneTasks[insaneRand]
-        insaneTasks.remove(insaneTasks[insaneRand])
-    elif (i == 4 or i == 6 or i == 18 or i == 20):                  # Green Squares (see sheet), 20% Medium, 70% Hard, 10% Insane
-        if random.randint(1, 5) == 1:                               # 20% Medium
-            medRand = math.floor(rand*len(medTasks))
-            bingerBoard += medTasks[medRand]
-            medTasks.remove(medTasks[medRand])
-        elif random.randint(1, 8) != 8:                             # 87.5% of remaining 80% Hard (70%)
-            hardRand = math.floor(rand*len(hardTasks))
-            bingerBoard += hardTasks[hardRand]
-            hardTasks.remove(hardTasks[hardRand])
-        else:                                                       # Remaining 10% Insane
-            insaneRand = math.floor(rand*len(insaneTasks))
-            bingerBoard += insaneTasks[insaneRand]
-            insaneTasks.remove(insaneTasks[insaneRand])
-    else:                                                           # Yellow Squares (see sheet), 50% Easy, 40% Medium, 8% Hard, 2% Insane
-        if random.randint(1, 2) == 1:                               # 50% Easy
-            easyRand = math.floor(rand*len(easyTasks))
-            bingerBoard += easyTasks[easyRand]
-            easyTasks.remove(easyTasks[easyRand])
-        elif random.randint(1, 5) != 5:                             # 80% of remaining 50% Medium (40%)
-            medRand = math.floor(rand*len(medTasks))
-            bingerBoard += medTasks[medRand]
-            medTasks.remove(medTasks[medRand])
-        elif random.randint(1, 5) != 5:                             # 80% of remaining 10% Hard (8%)
-            hardRand = math.floor(rand*len(hardTasks))
-            bingerBoard += hardTasks[hardRand]
-            hardTasks.remove(hardTasks[hardRand])
-        else:                                                       # Remaining 2% Insane
-            insaneRand = math.floor(rand*len(insaneTasks))
-            bingerBoard += insaneTasks[insaneRand]
-            insaneTasks.remove(insaneTasks[insaneRand])
-    bingerBoard += '\"},\n' 
+def addEasy(boardStr):
+    easyRand = math.floor(random.random()*len(easyTasks))
+    boardStr += easyTasks[easyRand]
+    easyTasks.remove(easyTasks[easyRand])
+    return boardStr
 
-bingerBoard = bingerBoard[0 : len(bingerBoard) - 2] + ']'           # minus 2 to delete last line break and comma
-print(bingerBoard)
-print(numAllTasks)
+def addMed(boardStr):
+    medRand = math.floor(random.random()*len(medTasks))
+    boardStr += medTasks[medRand]
+    medTasks.remove(medTasks[medRand])
+    return boardStr
+
+def addHard(boardStr):
+    hardRand = math.floor(random.random()*len(hardTasks))
+    boardStr += hardTasks[hardRand]
+    hardTasks.remove(hardTasks[hardRand])
+    return boardStr
+
+def addInsane(boardStr):
+    insaneRand = math.floor(random.random()*len(insaneTasks))
+    boardStr += insaneTasks[insaneRand]
+    insaneTasks.remove(insaneTasks[insaneRand])
+    return boardStr
+
+def defaultBoard():
+    bingerBoard = '['
+    for i in range(25):
+        bingerBoard += '{\"name\": \"'
+        if i == 12:                                                     # Middle Square, 100% Insane
+            bingerBoard = addInsane(bingerBoard)
+        elif (i == 4 or i == 6 or i == 18 or i == 20):                  # Green Squares (see sheet), 20% Medium, 70% Hard, 10% Insane
+            if random.randint(1, 5) == 1:                               # 20% Medium
+                bingerBoard = addMed(bingerBoard)
+            elif random.randint(1, 8) != 8:                             # 87.5% of remaining 80% Hard (70%)
+                bingerBoard = addHard(bingerBoard)
+            else:                                                       # Remaining 10% Insane
+                bingerBoard = addInsane(bingerBoard)
+        else:                                                           # Yellow Squares (see sheet), 50% Easy, 40% Medium, 8% Hard, 2% Insane
+            if random.randint(1, 2) == 1:                               # 50% Easy
+                bingerBoard = addEasy(bingerBoard)
+            elif random.randint(1, 5) != 5:                             # 80% of remaining 50% Medium (40%)
+                bingerBoard = addMed(bingerBoard)
+            elif random.randint(1, 5) != 5:                             # 80% of remaining 10% Hard (8%)
+                bingerBoard = addHard(bingerBoard)
+            else:                                                       # Remaining 2% Insane
+                bingerBoard = addInsane(bingerBoard)
+        bingerBoard += '\"},\n'
+    bingerBoard = bingerBoard[0 : len(bingerBoard) - 2] + ']'           # minus 2 to delete last line break and comma
+    return bingerBoard
+
+def speedBoard():
+    bingerBoard = '['
+    for i in range(25):
+        bingerBoard += '{\"name\": \"'
+        if (i == i in [3,9,12,15,21]):                                  # Green Squares
+            bingerBoard = addMed(bingerBoard)
+        else:                                                           # Yellow Squares
+            bingerBoard = addEasy(bingerBoard)
+        bingerBoard += '\"},\n'
+    bingerBoard = bingerBoard[0 : len(bingerBoard) - 2] + ']'           # minus 2 to delete last line break and comma
+    return bingerBoard
+
+print('Would you like a default board or a speed board? (D/S)')
+boardInput = str(input())
+if boardInput == 'D' or boardInput == 'd':
+    bingerBoard = defaultBoard()
+elif boardInput == 's' or boardInput == 's':
+    bingerBoard = speedBoard()
+
+# print(bingerBoard)
+# print(numAllTasks)
 
 print('Print to clipboard? (Y/N)')
 clipInput = str(input())
