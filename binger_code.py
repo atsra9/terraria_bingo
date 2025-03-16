@@ -95,7 +95,6 @@ insaneTasks = [ 'Flamarang',
                 'Lightning Boots',
                 'Obsidian Crate',
                 'Full Molten Armor',
-                'Mollusk Whistle',
                 str(random.randint(13,17)) + ' unique crafting stations', # 13 - 17
                 str(random.randint(2,4)) + ' Different Premium Golf Clubs', # 2 - 4
                 str(random.randint(25,40)) + ' Flasks of Fire/Poison', # 25 - 40
