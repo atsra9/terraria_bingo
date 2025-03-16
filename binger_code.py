@@ -26,7 +26,6 @@ easyTasks = ['1 of each grave (no golden variants)',
              str(random.randint(15,30)) + ' Antlion Eggs', # 15-30
              str(random.choice(['Glass', 'Frozen', 'Honey', 'Marble', 'Granite']) + ' Bookcase'),
              str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Gem Lock',
-             'Glowing Snail',
              str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
              str(random.randint(20,30)) + ' Feathers', # 20-30
              ]
@@ -50,7 +49,6 @@ medTasks = ['Boomstick',
             str(random.randint(60,90)) + ' Green Stucco', # 60-90
             str(random.randint(80,120)) + ' Aetherium Brick', # 80-120
             str(random.randint(2,3)) + ' Unique Grappling Hooks', # 2-3
-            'Guide to Peaceful Coexistance',
             str(random.randint(30,50)) + ' TNT Barrels', # 30-50
             str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Robe',
             'Faeling',
