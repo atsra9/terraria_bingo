@@ -1,33 +1,33 @@
 import random
 import math
-import pyperclip as clip # pip install pyperclip
+#pip install pyperclip
+import pyperclip as clip
 
 easyTasks = ['1 of each grave (no golden variants)',
-             str(random.randint(30,60)) + ' Molotov Cocktails', # 30-60
+             str(random.randint(30,60)) + ' Molotov Cocktails',
              'Obsidian Skull',
              'Fruit Salad and Fruit Juice',
-             str(random.randint(25,75)) + ' Cracked Dungeon Bricks', # 25-75
+             str(random.randint(25,75)) + ' Cracked Dungeon Bricks',
              'Any Gem Staff',
              'Die to Corrupt/Vicious Penguin',
              'Any Animal Cage',
              'Reef Chandelier',
-             str(random.randint(100,200)) + ' Boulders', # 100-200
-             str(random.randint(800,1200)) + ' Ice Blocks', # 800-1200
-             str(random.randint(15,25)) + ' Stars in a Bottle', # 15-25
+             str(random.randint(50,100)) + ' Boulders',
+             str(random.randint(400,600)) + ' Ice Blocks',
+             str(random.randint(10,15)) + ' Stars in a Bottle',
              'Monster Lasagna',
              'Throne',
              'Magic Mirror',
-             str(random.randint(3,6)) + ' Unique Banners', # 3-6
-             str(random.randint(30,50)) + ' Scarab Bombs', # 30-50
-             'Seafood Dinner',
-             str(random.randint(7,10)) + ' Unique Sinks', # 7-10
-             str(random.randint(4,6)) + ' Grub Soups', # 4-6
-             str(random.randint(150,250)) + ' Orange Torches', # 150-250
-             str(random.randint(15,30)) + ' Antlion Eggs', # 15-30
+             str(random.randint(2,4)) + ' Unique Banners',
+             str(random.randint(10,30)) + ' Scarab Bombs',
+             str(random.randint(3,5)) + ' Unique Sinks',
+             str(random.randint(50,150)) + ' Orange Torches',
+             str(random.randint(5,10)) + ' Antlion Eggs',
              str(random.choice(['Glass', 'Frozen', 'Honey', 'Marble', 'Granite']) + ' Bookcase'),
              str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Gem Lock',
-             str(random.randint(80,120)) + ' Copper/Tin Bars', # 80-120
-             str(random.randint(20,30)) + ' Feathers', # 20-30
+             str(random.randint(40,60)) + ' Copper/Tin Bars',
+             str(random.randint(4,8)) + ' Feathers',
+             str(random.randint(40,80)) + ' Cloud Blocks',
              ]
 numEasyTasks = len(easyTasks)
 
@@ -36,7 +36,6 @@ medTasks = ['Boomstick',
             'Solidifier',
             'Abeemination',
             'Torch God\'s Favor',
-            str(random.randint(20,30)) + ' Enchanted Nightcrawlers', # 20-30
             'Ash Wood Clock',
             str(random.randint(5,7)) + ' Unique Dye Items', # 5-7
             str(random.choice(['Gender Change Potion', 'Garland'])),
@@ -48,13 +47,15 @@ medTasks = ['Boomstick',
             'Mandible Blade',
             str(random.randint(60,90)) + ' Green Stucco', # 60-90
             str(random.randint(80,120)) + ' Aetherium Brick', # 80-120
-            str(random.randint(2,3)) + ' Unique Grappling Hooks', # 2-3
-            str(random.randint(30,50)) + ' TNT Barrels', # 30-50
+            '2 Unique Grappling Hooks',
+            'TNT Barrel',
             str(random.choice(['Amethyst', 'Topaz', 'Sapphire', 'Emerald', 'Ruby', 'Amber', 'Diamond'])) + ' Robe',
             'Faeling',
-            str(random.randint(2000,3000)) + ' Poisoned Knives', # 2000-3000
+            str(random.randint(200,250)) + ' Poisoned Knives',
             str(random.randint(100,200)) + ' Hellstone Brick', # 100-200
             str(random.randint(25,40)) + ' Skyware Candles', # 25-40
+            'Score a Hole in ' + str(random.randint(1,100)), #1-100
+            'Seafood Dinner',
             ]
 numMedTasks = len(medTasks)
 
@@ -68,13 +69,10 @@ hardTasks = ['3x3 Underworld Painting',
              str(random.choice(['Life', 'Mana'])) + ' Hair Dye', # Life/Mana Hair Dye
              'Ambrosia',
              str(random.randint(500,1000)) + ' Javelins', # 500 - 1000
-             'Bronze Golf Trophy',
              str(random.randint(6,10)) + ' Unique Enemy Statues', # 6 - 10
              str(random.randint(4,7)) + ' Geysers', # 4 - 7
-             'Used Gas Trap',
              'Night Vision Helmet',
              'Void Vault',
-             'Black Pearl',
              str(random.randint(8,12)) + ' Life Crystal Boulders', # 8 - 12
              'Dead Man\'s Sweater',
              str(random.randint(300,500)) + ' Poo', # 300 - 500,
@@ -96,10 +94,8 @@ insaneTasks = [ 'Flamarang',
                 'Obsidian Crate',
                 'Full Molten Armor',
                 str(random.randint(13,17)) + ' unique crafting stations', # 13 - 17
-                str(random.randint(2,4)) + ' Different Premium Golf Clubs', # 2 - 4
                 str(random.randint(25,40)) + ' Flasks of Fire/Poison', # 25 - 40
                 'Sunfury',
-                'Medicated Bandage',
                 ]
 numInsaneTasks = len(insaneTasks)
 numAllTasks = [numEasyTasks, numMedTasks, numHardTasks, numInsaneTasks]
