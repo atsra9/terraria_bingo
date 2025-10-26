@@ -21,3 +21,9 @@
   - New Hard Task: Full Obsidian Armor
   - New Insane Task: Medicated Bandage
   - Task Rework: 80-120 Copper Bars nerfed from Medium -> Easy
+
+10/26/25:
+  - New Easy Task: 40-80 Cloud Blocks
+  - Reduced the quantity of most Easy Tasks
+  - Removed most NPC-dependent tasks
+  - Removed Medicated Bandage
